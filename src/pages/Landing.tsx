@@ -1,6 +1,7 @@
+
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
-import { Shield, Lock, ArrowRight, CheckCircle, Bell, Eye, BriefcaseIcon, Fingerprint, AlertTriangle } from "lucide-react";
+import { Shield, Lock, ArrowRight, CheckCircle, Bell, Eye, BriefcaseIcon, Fingerprint, AlertTriangle, LogIn } from "lucide-react";
 import { Link } from 'react-router-dom';
 import Logo from '@/components/Logo';
 
@@ -48,9 +49,20 @@ const Landing: React.FC = () => {
               <a href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">How It Works</a>
               <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</a>
             </div>
-            <Button asChild variant="ghost">
-              <Link to="/app">Login</Link>
-            </Button>
+            <div className="flex items-center gap-3">
+              <Button asChild variant="outline">
+                <Link to="/app">
+                  <LogIn className="mr-2 h-4 w-4" />
+                  Login
+                </Link>
+              </Button>
+              <Button asChild variant="default" className="hidden sm:flex">
+                <Link to="/app/register">
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </nav>
         

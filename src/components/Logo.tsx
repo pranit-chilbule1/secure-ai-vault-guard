@@ -7,12 +7,14 @@ interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
   showText?: boolean;
   className?: string;
+  variant?: 'default' | 'white';
 }
 
 const Logo: React.FC<LogoProps> = ({ 
   size = 'md', 
   showText = true,
-  className
+  className,
+  variant = 'default'
 }) => {
   const sizes = {
     sm: 'h-6 w-6',
@@ -26,6 +28,8 @@ const Logo: React.FC<LogoProps> = ({
     lg: 'text-3xl'
   };
 
+  const textColor = variant === 'white' ? 'text-white' : '';
+
   return (
     <div className={cn("flex items-center gap-2", className)}>
       <div className="relative">
@@ -36,7 +40,7 @@ const Logo: React.FC<LogoProps> = ({
         )} />
       </div>
       {showText && (
-        <span className={cn("font-bold tracking-tight", textSizes[size])}>
+        <span className={cn("font-bold tracking-tight", textSizes[size], textColor)}>
           SecureVault
         </span>
       )}
