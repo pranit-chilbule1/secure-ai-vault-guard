@@ -47,8 +47,7 @@ const SecurityInsights: React.FC<SecurityInsightsProps> = ({
           </div>
           <Progress 
             value={securityScore} 
-            className="h-2" 
-            indicatorClassName={getScoreColor()} 
+            className={`h-2 ${getScoreColor()}`}
           />
         </div>
 
