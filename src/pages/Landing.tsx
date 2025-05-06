@@ -51,11 +51,12 @@ const Landing: React.FC = () => {
             </div>
             <div className="flex items-center gap-3">
               <Button asChild variant="outline">
-                <Link to="/app">
-                  <LogIn className="mr-2 h-4 w-4" />
-                  Login
-                </Link>
-              </Button>
+  <a href="https://passwordmanager-ten.vercel.app/" target="_blank" rel="noopener noreferrer">
+    <LogIn className="mr-2 h-4 w-4" />
+    Login
+  </a>
+</Button>
+
               <Button asChild variant="default" className="hidden sm:flex">
   <a href="https://passwordmanager-ten.vercel.app/" target="_blank" rel="noopener noreferrer">
     Get Started
