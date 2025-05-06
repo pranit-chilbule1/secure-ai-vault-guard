@@ -57,11 +57,12 @@ const Landing: React.FC = () => {
                 </Link>
               </Button>
               <Button asChild variant="default" className="hidden sm:flex">
-                <Link to="/app/register">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+  <a href="https://passwordmanager-ten.vercel.app/" target="_blank" rel="noopener noreferrer">
+    Get Started
+    <ArrowRight className="ml-2 h-4 w-4" />
+  </a>
+</Button>
+
             </div>
           </div>
         </nav>
